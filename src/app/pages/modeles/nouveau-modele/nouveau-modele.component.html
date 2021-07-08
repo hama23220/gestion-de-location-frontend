@@ -1,0 +1,35 @@
+<div class="col mb-3 ">
+  <div class="col-md-12">
+    <div class="col-md-12 mb-3 mt-3">
+      <h2>Nouveau modele</h2>
+    </div>
+    <div>
+      <form class="form" [formGroup]="form" >
+        <div class="row mb-3">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="marque du modele" formControlName="marque" >
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Nom du modele" formControlName="nomm"  >
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input type="text" class="form-control" placeholder="Carburant" formControlName="carburant" >
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" placeholder="puissance" formControlName="puissance" >
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-12 text-right">
+    <button class="btn btn-danger mr-3" (click)="cancelClick()">
+      <i class="fas fa-ban"></i>&nbsp;Annuler
+    </button>
+    <button type="submit" class="btn btn-primary" (click)="addModele()">
+      <i class="fas fa-save"></i>&nbsp;Enregistrer
+    </button>
+  </div>
+</div>

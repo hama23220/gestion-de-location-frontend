@@ -1,0 +1,53 @@
+<div class="col">
+  <div class="row m-3">
+    <div class="col-md-8 p-0">
+      <h2>Liste des Modeles des voitures</h2>
+    </div>
+    <div class="col-md-4 text-right">
+      <app-button-action
+        (clickEvent)="nouvelmodeles()"
+      ></app-button-action>
+    </div>
+  </div>
+  <div class="col m-3 text-center">
+       <div class="row custom-border mb-3 p-3" *ngFor= "let modele of modeles">
+         <div class="col-md-2 custom-border-right" >
+           {{modele.nomm}}
+         </div>
+         <div class="col-md-2 custom-border-right">
+          {{modele.marque}}
+         </div>
+         <div class="col-md-2 custom-border-right">
+          {{modele.carburant}}
+         </div>
+         <div class="col-md-2 custom-border-right ">
+          {{modele.puissance}}
+         </div>
+         <div class="col-md-2">
+          <div class="row">
+            <div class="col-md-4">
+              <button type="button" class="btn btn-link" (click)="modifierModele(modele.id)">
+                <i class="fas fa-pencil-alt"></i>&nbsp;Modifier
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-link text-danger" data-toggle="modal" data-target="#modalDeleteCat"
+                      (click)="delete(modele.id)">
+                <i class="fas fa-trash-alt"></i>&nbsp;Supprimer
+              </button>
+            </div>
+            <div class="col-md-4">
+              <button type="button" class="btn btn-link ">
+                <i class="far fa-list-alt"></i>&nbsp;Details
+              </button>
+            </div>
+          </div>
+        </div>
+       </div>
+  </div>
+  <div class="row mb-2">
+    <div class="col-md-11 text-center">
+      <app-pagination></app-pagination>
+    </div>
+  </div>
+</div>
