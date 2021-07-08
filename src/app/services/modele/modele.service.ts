@@ -25,9 +25,7 @@ export class ModeleService {
   }
 
   postmodele(modele: modele): Observable<any>{
-    return this.http.post(AUTH_API + "gestiondelocationdevoiture/modeles/create", modele
-
-    );
+    return this.http.post(AUTH_API + "gestiondelocationdevoiture/modeles/create", modele);
   }
 
   Deletemodele(id: number): Observable<any> {
